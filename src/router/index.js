@@ -8,8 +8,31 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+      redirect: '/register',
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: resolve => require(['@/components/pages/Register'] , resolve),
+      meta:{
+        pageTitle:'登录注册页'
+      }
+    },
+    {
+      path: '/home',
+      name: 'Home',
+      component: resolve => require(['@/components/pages/Home'] , resolve),
+      meta:{
+        pageTitle:'首页'
+      }
+    },
+    {
+      path: '/productDetial/:id',
+      name: 'ProductDetial',
+      component: resolve => require(['@/components/pages/ProductDetial'] , resolve),
+      meta:{
+        pageTitle:'商品详情'
+      }
+    },
   ]
 })
