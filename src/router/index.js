@@ -15,7 +15,8 @@ export default new Router({
       name: 'Register',
       component: resolve => require(['@/components/pages/Register'] , resolve),
       meta:{
-        pageTitle:'登录注册页'
+        pageTitle:'登录注册页',
+        top: false        
       }
     },
     {
@@ -23,15 +24,17 @@ export default new Router({
       name: 'Home',
       component: resolve => require(['@/components/pages/Home'] , resolve),
       meta:{
-        pageTitle:'首页'
+        pageTitle:'首页',
+        top: false        
       }
     },
     {
-      path: '/productDetial/:id',
+      path: '/productDetial',
       name: 'ProductDetial',
       component: resolve => require(['@/components/pages/ProductDetial'] , resolve),
       meta:{
-        pageTitle:'商品详情'
+        pageTitle:'商品详情',
+        top: true        
       }
     },
   ]

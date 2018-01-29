@@ -3,7 +3,8 @@
 let currency = function (price , sign ,type , num) {
     let isSign = sign?sign : '¥';
     let isNum = num?num : 2;
-    switch (type) {
+    let isType = type?type : 2;
+    switch (isType) {
         case 1:
             //$1,000,300的形式
             let isPrice = priceFilter(price);

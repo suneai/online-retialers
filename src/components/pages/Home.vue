@@ -1,17 +1,15 @@
 <template>
   <div class="home_wrap">
-    <Back></Back>
     <Banner :bannerList="banner_list"></Banner>
     <ProductList :productList="product_list"></ProductList>
   </div>
 </template>
 
 <script>
-import Back from "../public/BackBar";
 import Banner from "../home/Banner";
 import ProductList from "../home/ProductList";
 export default {
-  components: { Back, Banner, ProductList },
+  components: { Banner, ProductList },
   data() {
     return {
       banner_list: [],

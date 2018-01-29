@@ -1,6 +1,5 @@
 <template>
   <div class="register_wrap">
-      <Back></Back>
       <div class="user_info_wrap">
           <input class="user_name" v-model="user_name" type="text" placeholder="请输入电话号码" autocomplete="off"/>
           <input class="user_pw" v-model="user_pw" type="password" placeholder="请输入密码" autocomplete="off"/>
@@ -10,15 +9,16 @@
 </template>
 
 <script>
-import Back from "../public/BackBar";
 export default {
-  components:{Back},
   data(){
       return{
           user_name:'',
           user_pw:'',
           btn_color:1
       }
+  },
+  created(){
+
   },
   filters:{
       btnChangeColor(number){
@@ -40,7 +40,6 @@ export default {
   },
   methods:{
       submit(){
-          
           this.$router.push({name:'Home' , qurey:{user_name : this.user_name}})
       }
   }
