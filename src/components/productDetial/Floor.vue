@@ -1,5 +1,5 @@
 <template>
-  <div class="floor_01">
+  <div class="floor">
     <img :src="bg" alt="">
     <p class="text">{{paragraph}}</p>
   </div>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.floor_01 {
+.floor {
   margin-bottom: 0.4rem;
   width: 7.5rem;
   > img {

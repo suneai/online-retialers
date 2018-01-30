@@ -51,6 +51,9 @@ new Vue({
   router,
   template:'<App/>',
   components:{App},
+  data:{
+      eventHub:new Vue()
+  }
 });
 
 

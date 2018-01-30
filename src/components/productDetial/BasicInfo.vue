@@ -1,5 +1,5 @@
 <template>
-  <div class="basic_info_wrap">
+  <div id="basic_info_wrap" class="basic_info_wrap">
       <div class="title">{{basicInfo.title}}</div>
       <div class="sub_title">{{basicInfo.sub_title}}</div>
       <div class="tag_wrap">

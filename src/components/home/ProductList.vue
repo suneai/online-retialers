@@ -26,7 +26,6 @@ export default {
   created() {},
   methods:{
       skip(item){
-          console.log(item)
           this.$router.push({name:'ProductDetial' , query:{id:item.id}})
       }
   }

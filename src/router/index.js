@@ -34,7 +34,7 @@ export default new Router({
       component: resolve => require(['@/components/pages/ProductDetial'] , resolve),
       meta:{
         pageTitle:'商品详情',
-        top: true        
+        top: false        
       }
     },
   ]
