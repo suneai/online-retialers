@@ -65,7 +65,7 @@ export default {
         this.$root.eventHub.$on("changeFollow", index => {
           let top = 0;
           for (let k = 0; k < index; k++) {
-            top += floors_dom[k].offsetHeight;
+            top += parseFloat(this.getStyle(floors_dom[k] , "height"));
           }
          if (index == 0) {
              document.body.scrollTop = banner_dom + basic_info_dom + top - follow_dom;
@@ -88,20 +88,34 @@ export default {
       this.timer = setInterval(() => {
         let current_top = document.documentElement.scrollTop || document.body.scrollTop;
 
-        let banner_dom = document.getElementById("product_banner").offsetHeight;
-        let basic_info_dom = document.getElementById("basic_info_wrap").offsetHeight;
-        let follow_dom = document.getElementById("follow_wrap").offsetHeight;
+        let banner_dom = document.querySelector("#product_banner");
+        let basic_info_dom = document.querySelector("#basic_info_wrap");
+        let follow_dom = document.querySelector("#follow_wrap");
 
-        if (current_top >= (banner_dom + basic_info_dom - follow_dom)) {
+        let banner_height = 0;
+        let basic_info_dom_height = 0;
+        let follow_dom_height = 0;
+        if (banner_dom) { banner_height = parseFloat(this.getStyle(banner_dom,'height'));}
+        if (basic_info_dom) { basic_info_dom_height = parseFloat(this.getStyle(basic_info_dom,'height'));}
+        if (follow_dom) { follow_dom_height = parseFloat(this.getStyle(follow_dom,'height'));}
+
+        if (current_top >= (banner_height + basic_info_dom_height - follow_dom_height)) {
 
             this.show_follow = true;
-            this.getDom(banner_dom , basic_info_dom , follow_dom);
+            this.getDom(banner_height , basic_info_dom_height , follow_dom_height);
 
         }else{
           this.show_follow = false;
         }
       }, 30);
-    }
+    },
+    getStyle(oElement, sName){  
+      return oElement.currentStyle ? oElement.currentStyle[sName] : getComputedStyle(oElement, null)[sName];  
+    }, 
+  },
+  beforRouterLevea(to,from,next){
+    clearInterval(this.timer);
+    next()
   }
 };
 </script>

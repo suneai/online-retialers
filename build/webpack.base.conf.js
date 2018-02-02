@@ -78,5 +78,10 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  //引入高德地图
+  externals: {
+    'AMap': 'AMap',
+    'AMapUI': 'AMapUI'
+  },
 }

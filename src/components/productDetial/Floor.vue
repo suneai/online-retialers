@@ -24,7 +24,7 @@ export default {
 
 <style lang="less" scoped>
 .floor {
-  margin-bottom: 0.4rem;
+  // margin-bottom: 0.4rem;
   width: 7.5rem;
   > img {
     display: block;

@@ -20,8 +20,8 @@ export default {
 
 <style lang="less">
 @import "assets/less/ba.less";
-#app {
-  // background-color: #a4aaa4;
+html,body,#app{
+  .wh(100%,100%);
   
 }
 </style>

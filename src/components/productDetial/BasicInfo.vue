@@ -3,7 +3,7 @@
       <div class="title">{{basicInfo.title}}</div>
       <div class="sub_title">{{basicInfo.sub_title}}</div>
       <div class="tag_wrap">
-          <span class="tag" v-for="(item , index) in basicInfo.tag" :key="index">{{item}}</span>
+          <span class="tag" v-for="(item , index) in basicInfo.tag" :key="index" @click="goMap">{{item}}</span>
       </div>
       <div class="price">{{basicInfo.price | currency()}}</div>
   </div>
@@ -11,7 +11,12 @@
 
 <script>
 export default {
-  props:['basicInfo']
+  props:['basicInfo'],
+  methods:{
+      goMap(){
+          this.$router.push({name:'Map'})
+      }
+  }
 }
 </script>
 

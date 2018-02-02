@@ -33,7 +33,7 @@ export default {
     width: 6.9rem;
     height: 0.9rem;
     padding: 0 0.3rem;
-    background: rgba(222,222,222,0.3);
+    background: rgba(222,222,222,0.5);
     display: flex;
     align-items: center;
     >a{

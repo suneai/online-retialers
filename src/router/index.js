@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
@@ -35,6 +34,15 @@ export default new Router({
       meta:{
         pageTitle:'商品详情',
         top: false        
+      }
+    },
+    {
+      path: '/map',
+      name: 'Map',
+      component: resolve => require(['@/components/map/Map'] , resolve),
+      meta:{
+        pageTitle:'地图',
+        top: true        
       }
     },
   ]
