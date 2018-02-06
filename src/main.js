@@ -21,7 +21,11 @@ for(let key in filters){
   })
 }
 
+
 Vue.config.productionTip = false
+
+//引入vuex
+import store from './store'
 
 //页面导航的钩子,包含设置页面动态title和路由拦截
 router.beforeEach((to ,from , next) => {
@@ -51,6 +55,7 @@ new Vue({
   router,
   template:'<App/>',
   components:{App},
+  store,
   data:{
       eventHub:new Vue()
   }

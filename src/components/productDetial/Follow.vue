@@ -90,9 +90,10 @@ export default {
     }
   }
   .follow_box {
-    width: 100%;
+    width: 7.5rem;
     height: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
     &::-webkit-scrollbar {
       width: 0;
       height: 0;

@@ -5,22 +5,62 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-    <title>基本地图展示</title>
+    <title>面试题</title>
     <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
-    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
-    <script src="http://webapi.amap.com/maps?v=1.4.3&key=0ce2eb4ead19ab314a0896eab246d85f"></script>
-    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0 none;
+        }
+    .left{
+        width:200px;
+        height: 200px;
+        background-color: #ff0;
+        float: left;
+    }
+    .right{
+        width:200px;
+        height: 200px;
+        background-color: #ff0;
+        float: right;
+    }
+    .main{
+        height: 200px;
+        background-color: #000;
+        margin:0 200px;
+    }
+    </style>
 </head>
 
 <body>
-    <div id="container"></div>
+    
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="main">main</div>
 
     <script>
-        var map = new AMap.Map('container', {
-            resizeEnable: true,
-            zoom: 11,
-            center: [116.397428, 39.90923]
-        });
+        
+
+        //“实现一个函数输入123456789，输出123，456，789”
+        // function spliceString(string) {
+        //     console.log(string)
+
+        //     if (string.length > 3 && string.length <10) {
+
+        //         return string.slice(0,3) + "," + string.slice(3,6) + "," + string.slice(6,10);
+                
+        //     }else{
+        //         alert('字符串长度必须为9');
+        //     }
+            
+        // }
+        // alert(spliceString("123456789"))
+
+        //“css实现一个三列布局，要求左右固定200px，中间部分自适应”
+
+
+
 
     </script>
 </body>

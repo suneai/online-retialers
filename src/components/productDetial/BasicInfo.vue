@@ -22,6 +22,7 @@ export default {
 
 <style lang="less" scoped>
 .basic_info_wrap{
+    width: 7.5rem;
     box-sizing: border-box;
     padding: 0 0.3rem;
     overflow: hidden;

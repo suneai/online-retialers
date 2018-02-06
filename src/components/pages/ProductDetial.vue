@@ -6,6 +6,7 @@
      <div class="floor_tatol" v-for="(i , index) in floor_tatol" :key="index">
          <Floor></Floor>
      </div>
+      <BottomFoot></BottomFoot>
   </div>
 </template>
 
@@ -14,9 +15,10 @@ import Follow from "../productDetial/Follow";
 import Banner from "../productDetial/Banner";
 import BasicInfo from "../productDetial/BasicInfo";
 import Floor from "../productDetial/Floor";
+import BottomFoot from "../productDetial/Footer";
 export default {
   name: "ProductDetial",
-  components: { Follow, Banner, BasicInfo, Floor },
+  components: { Follow, Banner, BasicInfo, Floor ,BottomFoot},
   data() {
     return {
       show_follow: false,

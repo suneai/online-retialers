@@ -21,7 +21,7 @@ export default {
 <style lang="less">
 @import "assets/less/ba.less";
 html,body,#app{
-  .wh(100%,100%);
-  
+  .wh(7.5rem,100%);
+  // overflow-x: hidden;
 }
 </style>
