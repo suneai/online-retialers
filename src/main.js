@@ -4,6 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import api from "./api/index.js";
+Vue.prototype.$api = api;
+
+// require('./mockjs/index.js');
+
 //引入mockjs
 import Mock from "mockjs";
 Vue.prototype.$Mock = Mock;

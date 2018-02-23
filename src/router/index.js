@@ -38,6 +38,15 @@ export default new Router({
       }
     },
     {
+      path: '/cart',
+      name: 'Cart',
+      component: resolve => require(['@/components/pages/Cart'] , resolve),
+      meta:{
+        pageTitle:'购物车',
+        top: false        
+      }
+    },
+    {
       path: '/map',
       name: 'Map',
       component: resolve => require(['@/components/map/Map'] , resolve),
